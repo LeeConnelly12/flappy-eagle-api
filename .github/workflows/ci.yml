@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - feature/add-ci
   pull_request:
     branches:
       - main
