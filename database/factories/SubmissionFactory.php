@@ -18,7 +18,7 @@ class SubmissionFactory extends Factory
     {
         return [
             'name' => str(fake()->name())->limit(20),
-            'score' => fake()->randomNumber(4),
+            'score' => fake()->numberBetween(1, 10000),
         ];
     }
 }
