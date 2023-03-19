@@ -15,10 +15,6 @@ use App\Http\Controllers\LeaderboardController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::get('/leaderboard', [LeaderboardController::class, 'index'])
     ->name('leaderboard');
 
