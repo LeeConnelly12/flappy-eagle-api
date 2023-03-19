@@ -30,7 +30,7 @@ class LeaderboardController extends Controller
     public function store(Request $request): Response
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:12'],
+            'name' => ['required', 'string', 'max:20'],
             'score' => ['required', 'integer', 'min:1', 'max:65535'],
         ]);
 
