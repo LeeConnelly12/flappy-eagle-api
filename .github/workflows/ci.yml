@@ -10,6 +10,7 @@ on:
 
 jobs:
   tests:
+    name: Run tests
     runs-on: ubuntu-latest
     # Service container Mysql mysql
     services:
@@ -35,8 +36,6 @@ jobs:
         operating-system: [ubuntu-latest]
         php-versions: ["8.2"]
         dependency-stability: ["prefer-none"]
-
-    name: P${{ matrix.php-versions }} - L${{ matrix.laravel }} - ${{ matrix.dependency-stability }} - ${{ matrix.operating-system}}
 
     steps:
       - uses: actions/checkout@v3
@@ -108,6 +107,7 @@ jobs:
   deploy:
     name: "Deploy to Forge"
     runs-on: ubuntu-latest
+    needs: tests
 
     steps:
       # Trigger Laravel Forge Deploy
