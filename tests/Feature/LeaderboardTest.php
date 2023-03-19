@@ -13,7 +13,7 @@ it('can fetch submissions', function () {
 
     get('/api/leaderboard')
         ->assertOk()
-        ->assertJsonCount(3, 'submissions')
+        ->assertJsonCount(3, 'data')
         ->assertJsonFragment([
             'name' => $submissions->first()->name,
             'score' => $submissions->first()->score,
