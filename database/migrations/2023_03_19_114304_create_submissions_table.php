@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('submissions', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 25);
+            $table->string('name', 12);
             $table->unsignedSmallInteger('score');
             $table->timestamps();
         });
