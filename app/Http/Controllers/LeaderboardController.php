@@ -4,26 +4,25 @@ namespace App\Http\Controllers;
 
 use App\Models\Submission;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
 
 class LeaderboardController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of submissions.
      */
-    public function index()
+    public function index(): JsonResponse
     {
         return response()->json([
-            'submissions' => Submission::query()
-                ->select('name', 'score')
-                ->limit(10)
-                ->get(),
+            'submissions' => Submission::query()->select('name', 'score')->limit(10)->get(),
         ]);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created submission in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): Response
     {
         $request->validate([
             'name' => ['required', 'string', 'max:20'],
