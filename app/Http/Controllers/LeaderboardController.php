@@ -13,7 +13,10 @@ class LeaderboardController extends Controller
     public function index()
     {
         return response()->json([
-            'submissions' => Submission::all(),
+            'submissions' => Submission::query()
+                ->select('name', 'score')
+                ->limit(10)
+                ->get(),
         ]);
     }
 
