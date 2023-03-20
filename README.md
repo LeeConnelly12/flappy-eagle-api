@@ -1,6 +1,6 @@
 # Flappy Eagle API
 
-[![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2F38b22622-1761-4088-a6fc-fa6fc8cd59b3&style=flat-square)](https://forge.laravel.com)
+![tests workflow](https://github.com/LeeConnelly12/flappy-eagle-api/actions/workflows/ci.yml/badge.svg) [![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2F38b22622-1761-4088-a6fc-fa6fc8cd59b3&style=flat)](https://forge.laravel.com)
 
 ## Setup
 
