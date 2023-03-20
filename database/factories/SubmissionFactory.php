@@ -17,7 +17,7 @@ class SubmissionFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => str(fake()->name())->limit(12),
+            'name' => fake()->name(),
             'score' => fake()->numberBetween(1, 10000),
         ];
     }

@@ -15,7 +15,7 @@ it('can fetch submissions', function () {
         ->assertOk()
         ->assertJsonCount(3, 'data')
         ->assertJsonFragment([
-            'name' => $submissions->first()->name,
+            'name' => str($submissions->first()->name)->limit(12),
             'score' => $submissions->first()->score,
         ]);
 });
